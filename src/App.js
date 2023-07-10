@@ -21,6 +21,7 @@ export default function App() {
         setResult(data.rates[Object.keys(data.rates)[0]]);
       }
 
+      if (fromCur === toCur) return setResult(amount);
       fetchCurrency();
 
       return () => controller.abort();
